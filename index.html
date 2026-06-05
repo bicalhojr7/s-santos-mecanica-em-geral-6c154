@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>S. Santos | Mecânica de Precisão &amp; Quiet Luxury</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(24, 24, 27, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "primary-container": "#09090b",
+                "on-surface-variant": "#c8c5ca",
+                "outline-variant": "#47464a",
+                "on-tertiary": "#352f2f",
+                "tertiary": "#cec4c4",
+                "on-primary-fixed": "#1c1b1d",
+                "surface-container-high": "#2a2a2d",
+                "on-secondary-fixed-variant": "#454747",
+                "secondary-container": "#454747",
+                "on-primary-container": "#7a787b",
+                "on-tertiary-fixed-variant": "#4c4545",
+                "on-primary-fixed-variant": "#474649",
+                "on-tertiary-container": "#7f7777",
+                "surface-container": "#1f1f22",
+                "on-background": "#e4e1e6",
+                "on-secondary": "#2f3131",
+                "surface-dim": "#131316",
+                "primary": "#c8c6c8",
+                "secondary": "#c6c6c7",
+                "error": "#ffb4ab",
+                "surface-variant": "#353438",
+                "secondary-fixed-dim": "#c6c6c7",
+                "surface-container-low": "#1b1b1e",
+                "on-secondary-container": "#b4b5b5",
+                "inverse-surface": "#e4e1e6",
+                "on-error-container": "#ffdad6",
+                "primary-fixed-dim": "#c8c6c8",
+                "surface-container-highest": "#353438",
+                "inverse-primary": "#5f5e60",
+                "surface-tint": "#c8c6c8",
+                "error-container": "#93000a",
+                "on-secondary-fixed": "#1a1c1c",
+                "on-surface": "#e4e1e6",
+                "on-error": "#690005",
+                "tertiary-container": "#0c0808",
+                "primary-fixed": "#e5e1e4",
+                "surface": "#131316",
+                "surface-bright": "#39393c",
+                "inverse-on-surface": "#303033",
+                "on-primary": "#313032",
+                "tertiary-fixed": "#ebe0df",
+                "outline": "#919095",
+                "tertiary-fixed-dim": "#cec4c4",
+                "secondary-fixed": "#e2e2e2",
+                "on-tertiary-fixed": "#1f1a1a",
+                "background": "#131316",
+                "surface-container-lowest": "#0e0e11"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+              },
+              "spacing": {
+                "section-gap-mobile": "48px",
+                "container-margin-desktop": "80px",
+                "container-margin-mobile": "24px",
+                "gutter": "16px",
+                "base": "8px",
+                "section-gap-desktop": "120px"
+              },
+              "fontFamily": {
+                "body-md": ["Inter"],
+                "label-sm": ["Inter"],
+                "headline-lg": ["Inter"],
+                "headline-md": ["Inter"],
+                "display": ["Inter"],
+                "headline-lg-mobile": ["Inter"],
+                "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-zinc-950 text-on-surface font-body-md">
+<!-- Section 1: TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-xl border-b border-white/10" id="navbar">
+<div class="flex justify-between items-center h-20 px-container-margin-mobile md:px-container-margin-desktop max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-headline-md" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span class="text-headline-md font-headline-md tracking-tighter text-on-surface uppercase">S. SANTOS</span>
+</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#servicos">Serviços</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#diferenciais">Diferenciais</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#faq">Dúvidas</a>
+<a class="bg-white text-zinc-950 px-6 py-2 rounded-full font-bold hover:opacity-80 transition-all uppercase text-label-sm" href="https://wa.me/5500000000000">CONTATO</a>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface" id="menu-btn">
+<span class="material-symbols-outlined text-3xl" data-icon="menu">menu</span>
+</button>
+</div>
+<!-- Mobile Menu Drawer -->
+<div class="hidden md:hidden absolute top-20 left-0 w-full bg-zinc-950 border-b border-white/10 p-6 flex flex-col gap-6 shadow-2xl" id="mobile-menu">
+<a class="text-headline-md text-on-surface" href="#servicos">Serviços</a>
+<a class="text-headline-md text-on-surface" href="#diferenciais">Diferenciais</a>
+<a class="text-headline-md text-on-surface" href="#faq">Dúvidas</a>
+<a class="bg-white text-zinc-950 h-14 flex items-center justify-center rounded-lg font-bold" href="https://wa.me/5500000000000">SOLICITAR ORÇAMENTO</a>
+</div>
+</nav>
+<!-- Section 2: Hero -->
+<header class="relative pt-32 pb-section-gap-mobile md:pt-48 md:pb-section-gap-desktop overflow-hidden">
+<div class="px-container-margin-mobile md:px-container-margin-desktop max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+<div class="reveal">
+<h1 class="text-display font-display leading-tight mb-6 text-white">
+                    A Engrenagem da <br/><span class="text-outline">Precisão Absoluta.</span>
+</h1>
+<p class="text-body-lg text-on-surface-variant mb-10 max-w-lg">
+                    Cuidado meticuloso e tecnologia de ponta para veículos que exigem perfeição. Onde o luxo encontra a mecânica de elite.
+                </p>
+<a class="inline-flex items-center justify-center bg-white text-zinc-950 h-14 px-10 rounded-full font-bold hover:scale-105 transition-transform group" href="https://wa.me/5500000000000">
+                    Falar com Especialista
+                    <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="relative reveal delay-200">
+<div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+<img alt="Luxury Car" class="w-full h-full object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-700" data-alt="A sleek, high-end black sports car parked in a minimalist, dimly lit workshop with polished concrete floors. Professional studio lighting highlights the sharp aerodynamic lines and metallic surfaces of the vehicle. The overall atmosphere is sophisticated, quiet, and emphasizes luxury automotive care in a monochromatic, high-contrast style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3LQGUcKWvQ33g1c3PWuaQj02MS5g82XuvJXDQTPivqvClyrg8Nvj7hopo91K_PMq8bkyIAo1EFOZGhUE7pfvwGL3tDRkfxGrzzPwDyqLHViqNE1x5iaz4CBeGLvQ5Ry7dzvVezksgR2UBU1adKu9GOOwWFF6O5PvBCwUACjU9WW1aJCos4germiyIwiToYNAobnXppPAMFrl_n0smW4cIFZ7BnzXqElcOiORAydWXQ7faWpAqynVagEmTn2jN_N3NTtvfzTGhnfs"/>
+</div>
+<div class="absolute -bottom-6 -left-6 glass-card p-6 rounded-xl hidden md:block">
+<p class="text-primary font-bold text-headline-md">15+ Anos</p>
+<p class="text-label-sm uppercase tracking-widest text-on-surface-variant">de Excelência</p>
+</div>
+</div>
+</div>
+</header>
+<!-- Section 3: Pain Section (Dor) -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-lowest">
+<div class="px-container-margin-mobile md:px-container-margin-desktop max-w-4xl mx-auto space-y-6">
+<div class="reveal glass-card p-8 rounded-2xl flex items-start gap-6 border-l-4 border-l-white/20">
+<span class="material-symbols-outlined text-4xl text-outline" data-icon="report_problem">report_problem</span>
+<div>
+<h3 class="text-headline-md mb-2">Problemas Recorrentes?</h3>
+<p class="text-on-surface-variant">Chega de soluções temporárias. Nosso diagnóstico molecular identifica a raiz do problema no seu veículo de luxo.</p>
+</div>
+</div>
+<div class="reveal delay-100 glass-card p-8 rounded-2xl flex items-start gap-6 border-l-4 border-l-white/40">
+<span class="material-symbols-outlined text-4xl text-outline" data-icon="gpp_maybe">gpp_maybe</span>
+<div>
+<h3 class="text-headline-md mb-2">Falta de Confiança?</h3>
+<p class="text-on-surface-variant">Seu investimento merece transparência. Documentamos cada etapa do processo com rigor técnico e ética.</p>
+</div>
+</div>
+<div class="reveal delay-200 glass-card p-8 rounded-2xl flex items-start gap-6 border-l-4 border-l-white/60">
+<span class="material-symbols-outlined text-4xl text-outline" data-icon="schedule">schedule</span>
+<div>
+<h3 class="text-headline-md mb-2">Demora na Entrega?</h3>
+<p class="text-on-surface-variant">Valorizamos seu tempo. Nossa logística de peças e processos otimizados garantem agilidade sem comprometer a precisão.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Services Grid -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop" id="servicos">
+<div class="px-container-margin-mobile md:px-container-margin-desktop max-w-7xl mx-auto text-center mb-16 reveal">
+<p class="text-label-sm uppercase tracking-[0.3em] text-primary mb-4">Nossa Expertise</p>
+<h2 class="text-display font-display text-white">Serviços de Alta Performance</h2>
+</div>
+<div class="px-container-margin-mobile md:px-container-margin-desktop max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Service 1 -->
+<div class="reveal glass-card p-8 rounded-2xl hover:bg-white/5 transition-colors group">
+<div class="w-16 h-16 bg-zinc-900 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="settings_suggest">settings_suggest</span>
+</div>
+<h4 class="text-headline-md mb-4">Manutenção Preventiva</h4>
+<p class="text-on-surface-variant text-body-md">Check-ups rigorosos para garantir que cada componente opere em sua máxima eficiência.</p>
+</div>
+<!-- Service 2 -->
+<div class="reveal delay-100 glass-card p-8 rounded-2xl hover:bg-white/5 transition-colors group">
+<div class="w-16 h-16 bg-zinc-900 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="biotech">biotech</span>
+</div>
+<h4 class="text-headline-md mb-4">Diagnóstico Avançado</h4>
+<p class="text-on-surface-variant text-body-md">Uso de scanners de última geração para leitura precisa de telemetria e falhas eletrônicas.</p>
+</div>
+<!-- Service 3 -->
+<div class="reveal delay-200 glass-card p-8 rounded-2xl hover:bg-white/5 transition-colors group">
+<div class="w-16 h-16 bg-zinc-900 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="album">album</span>
+</div>
+<h4 class="text-headline-md mb-4">Freios e Suspensão</h4>
+<p class="text-on-surface-variant text-body-md">Estabilidade e segurança total. Ajustes finos para uma dirigibilidade suave e responsiva.</p>
+</div>
+<!-- Service 4 -->
+<div class="reveal delay-300 glass-card p-8 rounded-2xl hover:bg-white/5 transition-colors group">
+<div class="w-16 h-16 bg-zinc-900 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="verified">verified</span>
+</div>
+<h4 class="text-headline-md mb-4">Revisão Premium</h4>
+<p class="text-on-surface-variant text-body-md">O pacote completo de cuidados para veículos de colecionadores e entusiastas exigentes.</p>
+</div>
+</div>
+</section>
+<!-- Section 5: Differentials -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-zinc-950" id="diferenciais">
+<div class="px-container-margin-mobile md:px-container-margin-desktop max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1 reveal">
+<div class="rounded-3xl overflow-hidden shadow-2xl border border-white/5">
+<img alt="Workshop" class="w-full h-[500px] object-cover grayscale opacity-80" data-alt="An immaculate, high-tech automotive workshop interior at night. The space is organized with precision tools on dark metallic cabinets, glowing LED light strips on the ceiling, and a clean, glossy dark floor reflecting the minimal workspace. A luxury car engine is visible in the background, out of focus, highlighting the clean, modern engineering environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhk_AZJsgeJP7PKoQyZwuvZXqFSMSsLfdyigpwU8ojS6cQeTEF-hUPAQbU1l2ZVj-MjLLtpDbc5aVvljMHzgQPDCOv8NE_N04ZRkOBvTZPsQ-hawXqQAhVwMNAGlwNXvdr85j3xwiXeHGsLbQQrblEaNLa8meAM1mGi3YOF182iM0AOeSnzuwuQJDOD-ykqv9uBMu1wfS17Xgey0jebKmhBaCA2rCNjNU-PLCLQbcfIX-KeiNoT7gicgQHHyXw_tG5Qz1MYQQhSzg"/>
+</div>
+</div>
+<div class="order-1 lg:order-2 reveal">
+<h2 class="text-display font-display text-white mb-8">Onde a Técnica Se Torna Arte</h2>
+<ul class="space-y-8">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<strong class="text-headline-md block mb-1 text-white">Equipamentos de Ponta</strong>
+<p class="text-on-surface-variant">Investimos constantemente em maquinário importado para garantir padrões de fábrica em cada serviço.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<strong class="text-headline-md block mb-1 text-white">Profissionais Certificados</strong>
+<p class="text-on-surface-variant">Nossa equipe é formada por mestres mecânicos com especialização em marcas de luxo europeias e americanas.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<strong class="text-headline-md block mb-1 text-white">Transparência Total</strong>
+<p class="text-on-surface-variant">Relatórios fotográficos e vídeos acompanham todo o orçamento, garantindo sua paz de espírito.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Section 6: Social Proof -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-low overflow-hidden">
+<div class="px-container-margin-mobile md:px-container-margin-desktop max-w-7xl mx-auto text-center mb-16 reveal">
+<h2 class="text-display font-display text-white">Relatos de Satisfação</h2>
+</div>
+<div class="flex gap-6 overflow-x-auto pb-12 px-container-margin-mobile md:px-container-margin-desktop no-scrollbar">
+<!-- Testimonial 1 -->
+<div class="min-w-[300px] md:min-w-[400px] glass-card p-10 rounded-2xl reveal">
+<div class="flex gap-1 mb-6 text-primary">
+<span class="material-symbols-outlined text-xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-lg italic text-white mb-8">"O atendimento da S. Santos é incomparável. Deixei meu Porsche para revisão e o nível de detalhe no diagnóstico foi impressionante."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-zinc-800 overflow-hidden">
+<img alt="Client" class="w-full h-full object-cover grayscale" data-alt="A portrait of a sophisticated middle-aged man with short groomed hair, wearing a high-quality dark suit. He is smiling subtly against a soft-focus architectural background, representing a high-discerning luxury client. The photography style is high-contrast black and white to match the brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9eR070w9xRK06jIHMI4niROajeH2bwx6xu_w5WiZRENzYE0-7h_GVMMML_1UKs__dXPMlDXfEXyenGKfTX5brsiTF1f7uS0l4AplhujDg8fFTTOZ_ulikiwsUUcwT2Dg8A9gj_t-kQDuSdf8jXRjnUTVdGSAt2te5SMqVmf1JtKeGs9R8uXLNLCRN13FHTIWGrG8kw7cbDpyrx9c5tr0RqvNA90dl1g8iVmhD-JEOpIah7m-NJm3JVRRhtY5n9kgRGh7Uf9FNcRA"/>
+</div>
+<div>
+<p class="font-bold text-white">Ricardo Mendes</p>
+<p class="text-label-sm text-on-surface-variant">Empresário</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="min-w-[300px] md:min-w-[400px] glass-card p-10 rounded-2xl reveal delay-100">
+<div class="flex gap-1 mb-6 text-primary">
+<span class="material-symbols-outlined text-xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-lg italic text-white mb-8">"Finalmente encontrei uma oficina que entende o valor de um clássico. Transparência e competência técnica nota 10."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-zinc-800 overflow-hidden">
+<img alt="Client" class="w-full h-full object-cover grayscale" data-alt="A portrait of a confident professional woman with a minimalist aesthetic, wearing a white blazer against a neutral dark background. Her expression is calm and assured, reflecting high-class customer satisfaction. Monochromatic lighting highlights her facial features clearly." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOzlhviXu2Ul0JA0gKIYt3yKwUWCljEprWPXL8-7g0DXlSaPu6BhixRFg4TSMPzs6d-ilKWoav6wxTtoJ4xaT_IPEZeqY85Pe0QfITUuBE-6WYgnMCQM17tDTxmq4yfZ14YuL1FlLmUXZUUv2xxU7ubRq06PGOqq047c7PFACNdqlWMvuxRlcDkRloomOaHVbvhe6HgRbQTjnCVOSgzVwQXPkzIvWgqNWgivApe8JjX_80zreNpnthdIgnNjkOHxwMr_K6hfBdi70"/>
+</div>
+<div>
+<p class="font-bold text-white">Helena Viana</p>
+<p class="text-label-sm text-on-surface-variant">Arquiteta</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="min-w-[300px] md:min-w-[400px] glass-card p-10 rounded-2xl reveal delay-200">
+<div class="flex gap-1 mb-6 text-primary">
+<span class="material-symbols-outlined text-xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xl" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-lg italic text-white mb-8">"Máquinas modernas e ambiente impecável. A S. Santos trata meu carro melhor do que eu mesmo. Recomendo muito!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-zinc-800 overflow-hidden">
+<img alt="Client" class="w-full h-full object-cover grayscale" data-alt="A portrait of a stylish man in his 30s, looking away from the camera, wearing a high-end black cashmere sweater. The background is a clean, modern interior. The high-contrast black and white photography reinforces the luxury brand's tone and mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFEEu9ajQCmeJrANAJywRtes7WqDZOjIL3YhlKfsT2K7b11v2_cY6d2GB9HI5pMLCGkGss5hlAJsxKvHovbbaIdzkbV95NDHR6JQ891YogPwXiZ508G3ZU0OS_KapPFRcfZ-SKNoakgv3l9xZ0y1HshB70rE92F8F_lGP18Xz2EKSa2v2KZVqTn6DUEV3GdKQ8ZDfDL0MJ2oj0aVUU2HJGouMlzWJ7sSN76dLCUjF_ydfHVkjyTL778qhy0ijiclIgNUP0i6b-Hd0"/>
+</div>
+<div>
+<p class="font-bold text-white">Fábio Lima</p>
+<p class="text-label-sm text-on-surface-variant">Colecionador</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7: FAQ -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-zinc-950" id="faq">
+<div class="px-container-margin-mobile md:px-container-margin-desktop max-w-3xl mx-auto">
+<h2 class="text-headline-lg font-headline-lg text-white mb-12 text-center reveal">Dúvidas Frequentes</h2>
+<div class="space-y-4">
+<div class="reveal border border-white/10 rounded-xl overflow-hidden">
+<button class="w-full p-6 text-left flex justify-between items-center bg-zinc-900/50 hover:bg-zinc-900 transition-colors faq-trigger">
+<span class="font-bold text-white">Quais marcas vocês atendem?</span>
+<span class="material-symbols-outlined transition-transform" data-icon="expand_more">expand_more</span>
+</button>
+<div class="hidden p-6 text-on-surface-variant bg-zinc-900/30">
+                        Somos especialistas em veículos Premium e de Luxo, incluindo BMW, Mercedes-Benz, Audi, Porsche, Land Rover, Volvo e marcas esportivas exclusivas.
+                    </div>
+</div>
+<div class="reveal delay-100 border border-white/10 rounded-xl overflow-hidden">
+<button class="w-full p-6 text-left flex justify-between items-center bg-zinc-900/50 hover:bg-zinc-900 transition-colors faq-trigger">
+<span class="font-bold text-white">Como funciona o agendamento?</span>
+<span class="material-symbols-outlined transition-transform" data-icon="expand_more">expand_more</span>
+</button>
+<div class="hidden p-6 text-on-surface-variant bg-zinc-900/30">
+                        Você pode agendar pelo nosso WhatsApp. Oferecemos horários exclusivos para garantir que seu carro receba atenção total de nossos técnicos.
+                    </div>
+</div>
+<div class="reveal delay-200 border border-white/10 rounded-xl overflow-hidden">
+<button class="w-full p-6 text-left flex justify-between items-center bg-zinc-900/50 hover:bg-zinc-900 transition-colors faq-trigger">
+<span class="font-bold text-white">Vocês oferecem garantia nos serviços?</span>
+<span class="material-symbols-outlined transition-transform" data-icon="expand_more">expand_more</span>
+</button>
+<div class="hidden p-6 text-on-surface-variant bg-zinc-900/30">
+                        Sim. Todos os nossos serviços e peças originais contam com garantia integral, assegurando a durabilidade e a performance do seu veículo.
+                    </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 8: Final CTA -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop px-container-margin-mobile md:px-container-margin-desktop">
+<div class="max-w-7xl mx-auto glass-card rounded-[2.5rem] p-12 md:p-24 text-center relative overflow-hidden reveal">
+<div class="relative z-10">
+<h2 class="text-display font-display text-white mb-6">Pronto para elevar o nível do seu veículo?</h2>
+<p class="text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                    Agende agora seu diagnóstico premium e sinta a diferença de uma mecânica de precisão absoluta.
+                </p>
+<a class="inline-flex items-center justify-center bg-white text-zinc-950 h-16 px-12 rounded-full font-extrabold text-lg hover:bg-on-surface transition-colors shadow-xl" href="https://wa.me/5500000000000">
+                    Solicitar Orçamento Premium
+                </a>
+</div>
+<!-- Background Decorative Element -->
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-primary opacity-5 rounded-full blur-[100px]"></div>
+</div>
+</section>
+<!-- Section 9: Footer -->
+<footer class="bg-surface-container-lowest py-section-gap-mobile md:py-section-gap-desktop px-container-margin-mobile text-center border-t border-outline-variant/20">
+<div class="max-w-7xl mx-auto flex flex-col items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-headline-md" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span class="text-headline-md font-headline-md text-on-surface uppercase tracking-tighter">S. SANTOS</span>
+</div>
+<nav class="flex flex-wrap justify-center gap-6 text-body-md text-on-surface-variant">
+<a class="hover:text-white transition-colors" href="#servicos">Serviços Premium</a>
+<a class="hover:text-white transition-colors" href="https://wa.me/5500000000000">Agendamento</a>
+<a class="hover:text-white transition-colors" href="#">Localização</a>
+<a class="hover:text-white transition-colors" href="#">Termos de Serviço</a>
+</nav>
+<div class="pt-8 border-t border-white/5 w-full">
+<p class="text-label-sm text-on-surface-variant uppercase tracking-widest">
+                    © 2024 S. SANTOS MECÂNICA EM GERAL. MECHANICAL PRECISION &amp; QUIET LUXURY.
+                </p>
+</div>
+</div>
+</footer>
+<!-- Floating WhatsApp FAB -->
+<a class="fixed bottom-8 right-8 z-[100] bg-white text-zinc-950 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform md:bottom-12 md:right-12" href="https://wa.me/5500000000000">
+<span class="material-symbols-outlined text-3xl" data-icon="chat" style="font-variation-settings: 'FILL' 1;">chat</span>
+</a>
+<!-- Mobile Navigation Bar (Bottom NavBar Logic) -->
+<div class="md:hidden fixed bottom-0 w-full z-50 bg-zinc-950/90 backdrop-blur-2xl border-t border-white/5 h-20 flex justify-around items-center px-4">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-on-surface" href="#servicos">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-label-sm mt-1">Serviços</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-white text-zinc-950 rounded-full px-6 py-2 scale-90" href="https://wa.me/5500000000000">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="text-label-sm font-bold">Agendar</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-on-surface" href="https://wa.me/5500000000000">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span class="text-label-sm mt-1">WhatsApp</span>
+</a>
+</div>
+<script>
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-trigger').forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const content = trigger.nextElementSibling;
+                const icon = trigger.querySelector('.material-symbols-outlined');
+                
+                content.classList.toggle('hidden');
+                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            });
+        });
+
+        // Hide Navbar on Scroll Down, Show on Scroll Up
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const navbar = document.getElementById('navbar');
+            
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                navbar.style.transform = 'translateY(0)';
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Smooth close mobile menu on click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body></html>
